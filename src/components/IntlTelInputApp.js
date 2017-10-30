@@ -285,10 +285,12 @@ class IntlTelInputApp extends Component {
       // on change flag, trigger a custom event
       // Allow Main app to do things when a country is selected
       if (!isInit && prevCountry.iso2 !== countryCode &&
-          typeof this.props.onSelectFlag === 'function') {
+        typeof this.props.onSelectFlag === 'function') {
         const currentNumber = this.state.value;
 
         this.props.onSelectFlag(currentNumber, this.selectedCountryData);
+
+        this.notifyPhoneNumberChange(currentNumber);
       }
     });
   }
