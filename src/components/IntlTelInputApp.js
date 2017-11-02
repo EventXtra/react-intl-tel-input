@@ -476,7 +476,7 @@ class IntlTelInputApp extends Component {
       }
     }
 
-    const doNotify = true;
+    const doNotify = false;
 
     // NOTE: if tempCountry is set to auto, that will be handled separately
     // format

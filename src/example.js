@@ -26,7 +26,7 @@ const lookup = (callback) => {
 };
 
 function log(...args) {
-  console.log(args);
+  console.debug(args);
 }
 
 class DemoComponent extends Component {
